@@ -35,7 +35,8 @@
 <script src="http://www2.gov.bc.ca/StaticWebResources/static/shared/scripts/jquery/jquery-1.11.1.min.js"></script>
 <style>
 .my-url {font-size: 95%; color: #888; text-align:right;}
-#sorttable TH {text-align: left;}
+
+#primaryrow {border: none; padding:0px 3px 0px 3px; font-size:130%;}
 </style>
 
 <script>
@@ -59,11 +60,13 @@
 //    get tab id value from query string, default to "tab"
 //    format as an id, then fire the tab() function on that.
 //    allows users to be directed to an appropriate tab on the URL ...?tab=[identifier]
-$( document ).ready( function() {
-     var tabval =  $.QueryString["tab"] ||  "home" ; // get tab id value from query string, default to "tab"
-     tabval = "#" + tabval + "-tab";
-     $(tabval).tab('show');
-})
+$(document).ready(function(event) {
+   $(".back-to-top").on("focus mousedown", function(e) {
+                 e.preventDefault();
+     $('html,body').animate({ scrollTop: 0 }, 'slow');
+   });
+});
+
 </script>
 
 
@@ -106,50 +109,44 @@ $( document ).ready( function() {
 </div>
 
 
-
-
-
 <div id="topicTemplate" class="template container">
   	<!-- div style="max-width:1024px;min-width:600px;margin:auto;" -->
    <h2>EMBC&rsquo;s New Default -- Split Out Primary Column</h2>
 
    
-   <div class="row">
-      <div class="col-xs-12 col-sm-4 panel panel-default" id="quaketsunami"  style="padding:0px 3px 0px 3px; font-size:130%;">
-         <div class="panel-heading"><h3>Earthquake and Tsunami </h3></div>
-         <div class="panel-body">
+   <div class="row" id="primaryrow">
+      <div class="col-xs-12 col-sm-4" id="quaketsunami">
+         <h3 class="well">Earthquake and Tsunami </h3>
             <ul>
                <li><a target="_blank" href="http://earthquakescanada.nrcan.gc.ca/index-en.php">Earthquakes Canada (NRCan)</a></li>
                <li><a target="_blank" href="http://earthquake.usgs.gov/earthquakes/map/">USGS (US Geological Service)</a></li>
                <li><a target="_blank" href="http://ntwc.arh.noaa.gov/">National Tsunami Warning Center (NOAA)</a></li>
             </ul>
-         </div>
       </div>
       
-      <div class="col-xs-12 col-sm-4 panel panel-default" id="bclocal"  style="padding:0px 3px 0px 3px; font-size:130%;">
-         <div class="panel-heading"><h3>BC and Local </h3></div>         
-         <div class="panel-body">
+      <div class="col-xs-12 col-sm-4" id="bclocal">
+         <h3 class="well">BC and Local </h3>         
+         
             <ul>
                <li><a target="_blank" href="https://www.emergencyinfobc.gov.bc.ca/">Emergency Info BC</a></li>
                <li><a target="_blank" href="http://bcwildfire.ca/index.htm">BC Wildfire Service</a></li>
                <li><a target="_blank" href="http://bcrfc.env.gov.bc.ca/">River Forecast Centre</a></li>
                <li><a target="_blank" href="http://www.avalanche.ca/">Avalanche Canada</a></li>
             </ul>
-         </div>
       </div>
       
-      <div class="col-xs-12 col-sm-4 panel panel-default" id="weather"  style="padding:0px 3px 0px 3px; font-size:130%;">
-         <div class="panel-heading"><h3>Weather Forecasting and Conditions</h3></div>         
-         <div class="panel-body">
+      <div class="col-xs-12 col-sm-4" id="weather" >
+         <h3 class="well">Weather</h3>      
+         
             <ul>
                <li><a target="_blank" href="">Weather Office (BC Weather)</a></li>
                <li><a target="_blank" href="">DriveBC</a></li>
                <li><a target="_blank" href="">National Hurricane Center (NOAA)</a></li>
             </ul>
-         </div>
+         
       </div>
    </div> <!-- END ROW -->
-      
+<hr>      
    <div class="row">
       <div class="col-xs-12 col-sm-4 well" id="internetlinks" style="padding:0px 3px 0px 3px;">
          <h3>General EMBC Resource Links</h3>
@@ -284,7 +281,7 @@ $( document ).ready( function() {
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://www2.gov.bc.ca/StaticWebResources/static/shared/bootstrap-3.2.0/js/bootstrap.min.js"></script>  
-<script src="http://www2.gov.bc.ca/StaticWebResources/static/gov3/js/misc.js"></script>
+<!-- script src="http://www2.gov.bc.ca/StaticWebResources/static/gov3/js/misc.js"></script -->
 
 </body>
 </html>
