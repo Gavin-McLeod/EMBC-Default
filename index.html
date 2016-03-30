@@ -57,9 +57,7 @@
 })(jQuery);
 
 // After document loads ...
-//    get tab id value from query string, default to "tab"
-//    format as an id, then fire the tab() function on that.
-//    allows users to be directed to an appropriate tab on the URL ...?tab=[identifier]
+//    add the functionality to support the "Back-To-Top" feature
 $(document).ready(function(event) {
    $(".back-to-top").on("focus mousedown", function(e) {
                  e.preventDefault();
