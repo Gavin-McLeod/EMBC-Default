@@ -34,9 +34,7 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://www2.gov.bc.ca/StaticWebResources/static/shared/scripts/jquery/jquery-1.11.1.min.js"></script>
 <style>
-.my-url {font-size: 95%; color: #888; text-align:right;}
-
-#primaryrow {border: none; padding:0px 3px 0px 3px; font-size:130%;}
+   #primaryrow {border: none; padding:0px 3px 0px 3px; font-size:130%;}
 </style>
 
 <script>
@@ -76,45 +74,45 @@ $(document).ready(function(event) {
     <![endif]-->
   </head>
   <body>
-
-<div id="header-main" class="navbar navbar-default navbar-fixed-top">	
-		
-   <div style="display: block;" class="container">				
-      <div id="header-main-row1" class="row">
-         <div class="col-sm-3 col-md-2 col-lg-2 header-main-left">                  <!-- CUSTOM: page logo container, column widths are modified from the original default of lass="col-sm-2 col-md-2 col-lg-2 header-main-left" -->
-            <div id="logo">
-               <a href="http://gov.bc.ca/gov/content/home"><img src="http://www2.gov.bc.ca/assets/gov/home/gov3_bc_logo.png" alt="Government of B.C." title="Government of B.C."></a>
+<div id="header">
+   <div id="header-main">	<!-- class="navbar navbar-default navbar-fixed-top" -->
+         
+      <div style="display: block;" class="container">				
+         <div id="header-main-row1" class="row">
+            <div class="col-sm-3 col-md-2 col-lg-2 header-main-left">                  <!-- CUSTOM: page logo container, column widths are modified from the original default of lass="col-sm-2 col-md-2 col-lg-2 header-main-left" -->
+               <div id="logo">
+                  <a href="http://gov.bc.ca/gov/content/home"><img src="http://www2.gov.bc.ca/assets/gov/home/gov3_bc_logo.png" alt="Government of B.C." title="Government of B.C."></a>
+               </div>
+            </div>
+            <div class="col-sm-4 col-md-5 col-lg-6">   <!-- CUSTOM - this DIV is added -->
+               <h1 id="customizedTitle">EM<span style="color:#f6a01b;">BC</span></h1>   <!-- PAGE CONTENT TITLE -->
             </div>
          </div>
-         <div class="col-sm-4 col-md-5 col-lg-6">   <!-- CUSTOM - this DIV is added -->
-            <h1 id="customizedTitle">EM<span style="color:#f6a01b;">BC</span> Default</h1>   <!-- PAGE CONTENT TITLE -->
-         </div>
       </div>
-   </div>
-
-
-   <div class="navigationRibbon hidden-xs hidden-sm">		<!--  hidden-xs -->
-      <div class="level2Navigation">
-         <div class="container">
-            <a href="">EMBC 1</a>
-            <a href="">EMBC 2</a>
-            <a href="">EMBC 3</a>
-            <a href="">EMBC 4</a>
-            <a href="">EMBC 5</a>
-         </div>
-      </div>					
+   
+   
+      <!-- div class="navigationRibbon hidden-xs hidden-sm">
+         <div class="level2Navigation">
+            <div class="container">
+               <a href="">EMBC 1</a>
+               <a href="">EMBC 2</a>
+               <a href="">EMBC 3</a>
+               <a href="">EMBC 4</a>
+               <a href="">EMBC 5</a>
+            </div>
+         </div>					
+      </div -->
    </div>
 </div>
 
-
 <div id="topicTemplate" class="template container">
   	<!-- div style="max-width:1024px;min-width:600px;margin:auto;" -->
-   <h2>EMBC&rsquo;s New Default</h2>
+   <h1 style="margin-top:20px;">Emergency Management BC</h1>
 
    
    <div class="row" id="primaryrow">
       <div class="col-xs-12 col-sm-4" id="quaketsunami">
-         <h3 class="well">Earthquake and Tsunami </h3>
+         <h2 class="well">Earthquake and Tsunami </h2>
             <ul>
                <li><a target="_blank" href="http://earthquakescanada.nrcan.gc.ca/index-en.php">Earthquakes Canada (NRCan)</a></li>
                <li><a target="_blank" href="http://earthquake.usgs.gov/earthquakes/map/">USGS (US Geological Service)</a></li>
@@ -123,7 +121,7 @@ $(document).ready(function(event) {
       </div>
       
       <div class="col-xs-12 col-sm-4" id="bclocal">
-         <h3 class="well">BC and Local </h3>         
+         <h2 class="well">BC and Local </h2>         
          
             <ul>
                <li><a target="_blank" href="https://www.emergencyinfobc.gov.bc.ca/">Emergency Info BC</a></li>
@@ -134,7 +132,7 @@ $(document).ready(function(event) {
       </div>
       
       <div class="col-xs-12 col-sm-4" id="weather" >
-         <h3 class="well">Weather</h3>      
+         <h2 class="well">Weather</h2>      
          
             <ul>
                <li><a target="_blank" href="http://weather.gc.ca/forecast/canada/index_e.html?id=BC">Weather Office (BC Weather)</a></li>
@@ -144,12 +142,12 @@ $(document).ready(function(event) {
          
       </div>
    </div> <!-- END ROW -->
-<hr>      
+   <hr>      
    <div class="row">
       <div class="col-xs-12 col-sm-4 well" id="internetlinks" style="padding:0px 3px 0px 3px;">
-         <h3>General EMBC Resource Links</h3>
+         <h2>General EMBC Resource Links</h2>
          <ul class="list-group">
-            <li class="list-group-item">Internet
+            <li class="list-group-item"><h3>Internet</h3>
                <ul>
                   <li><a target="_blank" href="http://www2.gov.bc.ca/gov/content?id=C0AA22EC22424D7080F1CAEE7E951DA6">Emergency Preparedness, Response and Recovery</a>
                      <ul>
@@ -167,7 +165,7 @@ $(document).ready(function(event) {
                   <li><a target="_blank" href="http://dir.gov.bc.ca/gtds.cgi?searchString=emergency+management+bc&sortBy=name&sortOrder=ascending&search=Search&gobutton.x=17&gobutton.y=14">EMBC Staff Email</a></li>
                </ul>
             </li>
-           <li class="list-group-item">Intranet (Staff Only)
+           <li class="list-group-item"><h3>Intranet (Staff Only)</h3>
                <ul>
                  <li><a target="_blank" href="http://www.emisbc.ca">ETEAM</a></li>
                  <li><a href="https://sp.embc.gov.bc.ca/" title="SharePoint Gateway" target="_blank">EMBC's SharePoint Gateway</a></li>
@@ -180,16 +178,16 @@ $(document).ready(function(event) {
          </ul>
       </div>    
       <div class="col-xs-12 col-sm-4 well" id="internetlinks" style="padding:0px 3px 0px 3px;">
-        <h3>Business</h3>
+        <h2>Business</h2>
          <ul class="list-group">
-            <li class="list-group-item">Ministry of Transportation and Infrastructure
+            <li class="list-group-item"><h3>Ministry of Transportation and Infrastructure</h3>
                <ul>
                   <li><a target="_blank" href="http://www2.gov.bc.ca/gov/content?id=D7D2E53133D34D80865418905FFD918D">Ministry Home</a></li>
                   <li><a target="_blank" href="http://gww.th.gov.bc.ca/trannet/index.aspx">INTRAnet</a></li>
                   <li><a target="_blank" href="https://projects.sp.th.gov.bc.ca/SitePages/Home.aspx">MOTI Information Management Branch (IMB) Hub</a></li>
                </ul>
             </li>
-            <li class="list-group-item">Government of BC
+            <li class="list-group-item"><h3>Government of BC</h3>
                <ul>
                   <li><a target="_blank" href="http://www2.gov.bc.ca/gov/content?id=7782AB62B4364F439B6A258F4D730786">Government Home</a></li>
                   <li><a target="_blank" href="http://dir.gov.bc.ca/">Directory (GAL)</a></li>
@@ -219,7 +217,7 @@ $(document).ready(function(event) {
       </div>
       
       <div class="col-xs-12 col-sm-4 well" id="internetlinks" style="padding:0px 3px 0px 3px;">
-         <h3>Technology Links: (Staff Only)</h3>
+         <h2>Technology Links: (Staff Only)</h2>
          <ul class="list-group">
             <li class="list-group-item">
                <ul>
@@ -230,13 +228,10 @@ $(document).ready(function(event) {
                </ul>
             </li>
          </ul>
-        
       </div>
-      
-      
     </div>
     
-
+    <p><a href="http://default.pep.gov.bc.ca/index.htm">LEGACY PAGE</a></p>
 </div>
 
 <!-- FOOTER START -->
